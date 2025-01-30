@@ -14,7 +14,7 @@ public class ItemService {
     private ItemRepository itemRepository;
 
     public Flux<Item> getAllItems() {
-        return itemRepository.findAll();
+        return itemRepository.findAllWithDelay();
     }
 
     public Mono<Item> getItemById(Long id) {
